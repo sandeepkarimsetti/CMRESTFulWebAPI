@@ -15,7 +15,7 @@ import com.contactsmanager.service.ContactsManagerServiceImpl;
 
 @CrossOrigin(origins = "https://ang5-cm-rest-web-api-9912638661.stackblitz.io", maxAge = 3600)
 @RestController
-@RequestMapping(value = "/CMWebAPI", method = RequestMethod.GET)
+@RequestMapping(value = "/CMWebAPI")
 public class ContactsManagerController {
 	
 	@Autowired
