@@ -1,6 +1,5 @@
 package com.contactsmanager.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.contactsmanager.domain.*;
-import com.contactsmanager.service.ContactsManagerService;
+
 import com.contactsmanager.service.ContactsManagerServiceImpl;
-@CrossOrigin
+
+@CrossOrigin(origins = "http://cm-rest-api-mysqldb.1d35.starter-us-east-1.openshiftapps.com", maxAge = 3600)
 @RestController
 public class ContactsManagerController {
 	
