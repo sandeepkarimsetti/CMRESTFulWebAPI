@@ -13,7 +13,7 @@ import com.contactsmanager.domain.*;
 
 import com.contactsmanager.service.ContactsManagerServiceImpl;
 
-@CrossOrigin(origins = "http://cm-rest-api-mysqldb.1d35.starter-us-east-1.openshiftapps.com", maxAge = 3600)
+@CrossOrigin(origins = "https://ang5-cm-rest-web-api-9912638661.stackblitz.io", maxAge = 3600)
 @RestController
 public class ContactsManagerController {
 	
