@@ -15,6 +15,7 @@ import com.contactsmanager.service.ContactsManagerServiceImpl;
 
 @CrossOrigin(origins = "https://ang5-cm-rest-web-api-9912638661.stackblitz.io", maxAge = 3600)
 @RestController
+@RequestMapping(value = "/CMWebAPI", method = RequestMethod.GET)
 public class ContactsManagerController {
 	
 	@Autowired
@@ -28,14 +29,14 @@ public class ContactsManagerController {
 		this.contactsManagerService = contactsManagerService;
 	}
 
-	@RequestMapping(value = "/CMWebAPI", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String defaultRequest() {
 		return "invalid request";
 	}
 
 	// GET all customers
 	// API URL: /CMWebAPI/contacts
-	@RequestMapping(value = "/CMWebAPI/contacts", method = RequestMethod.GET)
+	@RequestMapping(value = "/contacts", method = RequestMethod.GET)
 	public List<Contact> getAllContacts() {
 		
 		System.out.println("==== In Controller getAllContacts method ====");
@@ -60,7 +61,7 @@ public class ContactsManagerController {
 
 	// GET a customer
 	// API URL: /CMWebAPI/contacts/id
-	@RequestMapping(value = "/CMWebAPI/contacts/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.GET)
 	public Contact getContactByID(@PathVariable("id") String contactID) {
 		// edit this line
 		Contact fetchedContact = contactsManagerService.getContactByID(Long.parseLong(contactID));
@@ -70,7 +71,7 @@ public class ContactsManagerController {
 
 	// POST a customer
 	// API URL: /CMWebAPI/contacts
-	@RequestMapping(value = "/CMWebAPI/contacts", method = RequestMethod.POST)
+	@RequestMapping(value = "/contacts", method = RequestMethod.POST)
 	public Contact createContact(@RequestBody Contact contact) {
 		System.out.println("^^^^^ Request Body in createContact controller method ^^^^" + contact);
 		
@@ -89,7 +90,7 @@ public class ContactsManagerController {
 
 	// PUT a customer
 	// API URL: /CMWebAPI/contacts
-	@RequestMapping(value = "/CMWebAPI/contacts/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.PUT)
 	public Contact updateContact(@PathVariable("id") String contactID, @RequestBody Contact contact) {
 		
 		if(contact == null) {
@@ -104,7 +105,7 @@ public class ContactsManagerController {
 
 	// DELETE a customer
 	// API URL: /CMWebAPI/contacts/id
-	@RequestMapping(value = "/CMWebAPI/contacts/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.DELETE)
 	public Contact deleteContact(@PathVariable("id") String contactID) {
 		// edit this line
 		Contact deletedContact = contactsManagerService.deleteContact(Long.parseLong(contactID));
