@@ -44,9 +44,10 @@ public class BeanConfig {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-            	registry.addMapping("/CMWebAPI/**")
-            		.allowedOrigins("https://ang5-cm-rest-web-api-9912638661.stackblitz.io")
-            		.allowedMethods("PUT", "DELETE", "GET", "POST")
+            	registry.addMapping("/*")
+            		.allowedOrigins("*")
+            		//.allowedOrigins("https://ang5-cm-rest-web-api-9912638661.stackblitz.io")
+            		//.allowedMethods("PUT", "DELETE", "GET", "POST")
             	  //.allowedHeaders("header1", "header2", "header3")
             	  //.exposedHeaders("header1", "header2")
             	  //.allowCredentials(false)
