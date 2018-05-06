@@ -14,7 +14,8 @@ import com.contactsmanager.domain.*;
 import com.contactsmanager.service.ContactsManagerServiceImpl;
 
 //@CrossOrigin(origins = "https://ang5-cm-rest-web-api-9912638661.stackblitz.io", maxAge = 3600)
-@CrossOrigin(origins = "*", maxAge = 3600)
+//@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/CMWebAPI")
 public class ContactsManagerController {
@@ -29,7 +30,7 @@ public class ContactsManagerController {
 	public void ContactsManagerServiceImpl (ContactsManagerServiceImpl contactsManagerService) {
 		this.contactsManagerService = contactsManagerService;
 	}
-	@CrossOrigin(origins = "*", maxAge = 3600)
+//	@CrossOrigin(origins = "*", maxAge = 3600)
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String defaultRequest() {
 		return "invalid request";
@@ -37,7 +38,7 @@ public class ContactsManagerController {
 
 	// GET all customers
 	// API URL: /CMWebAPI/contacts
-	@CrossOrigin(origins = "*", maxAge = 3600)
+//	@CrossOrigin(origins = "*", maxAge = 3600)
 	@RequestMapping(value = "/contacts", method = RequestMethod.GET)
 	public List<Contact> getAllContacts() {
 		
@@ -63,7 +64,7 @@ public class ContactsManagerController {
 
 	// GET a customer
 	// API URL: /CMWebAPI/contacts/id
-	@CrossOrigin(origins = "*", maxAge = 3600)
+	//@CrossOrigin(origins = "*", maxAge = 3600)
 	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.GET)
 	public Contact getContactByID(@PathVariable("id") String contactID) {
 		// edit this line
@@ -74,7 +75,7 @@ public class ContactsManagerController {
 
 	// POST a customer
 	// API URL: /CMWebAPI/contacts
-	@CrossOrigin(origins = "*", maxAge = 3600)
+	//@CrossOrigin(origins = "*", maxAge = 3600)
 	@RequestMapping(value = "/contacts", method = RequestMethod.POST)
 	public Contact createContact(@RequestBody Contact contact) {
 		System.out.println("^^^^^ Request Body in createContact controller method ^^^^" + contact);
@@ -94,7 +95,7 @@ public class ContactsManagerController {
 
 	// PUT a customer
 	// API URL: /CMWebAPI/contacts
-	@CrossOrigin(origins = "*", maxAge = 3600)
+	//@CrossOrigin(origins = "*", maxAge = 3600)
 	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.PUT)
 	public Contact updateContact(@PathVariable("id") String contactID, @RequestBody Contact contact) {
 		
@@ -110,7 +111,7 @@ public class ContactsManagerController {
 
 	// DELETE a customer
 	// API URL: /CMWebAPI/contacts/id
-	@CrossOrigin(origins = "*", maxAge = 3600)
+	//@CrossOrigin(origins = "*", maxAge = 3600)
 	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.DELETE)
 	public Contact deleteContact(@PathVariable("id") String contactID) {
 		// edit this line

@@ -44,17 +44,35 @@ public class BeanConfig {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-            	registry.addMapping("/*")
-            		.allowedOrigins("*")
+            	registry.addMapping("/**")
+            		.allowedOrigins("https://ang5-cm-rest-web-api-9912638661.stackblitz.io")
             		//.allowedOrigins("https://ang5-cm-rest-web-api-9912638661.stackblitz.io")
             		//.allowedMethods("PUT", "DELETE", "GET", "POST")
-            	  //.allowedHeaders("header1", "header2", "header3")
-            	  //.exposedHeaders("header1", "header2")
-            	  //.allowCredentials(false)
+            		.allowedMethods("*")
+            	    //.allowedHeaders("header1", "header2", "header3")
+            	    .allowedHeaders("*")
+            	    //.exposedHeaders("header1", "header2")
+            	    .exposedHeaders("*")
+            	    //.allowCredentials(false)
             		.maxAge(3600);
             }
         };
     }
+    
+/*    @Bean
+	public FilterRegistrationBean corsFilter() {
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		CorsConfiguration config = new CorsConfiguration();
+		config.setAllowCredentials(true);
+		config.addAllowedOrigin("http://domain1.com");
+		config.addAllowedHeader("*");
+		config.addAllowedMethod("*");
+		source.registerCorsConfiguration("/**", config);
+		FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
+		bean.setOrder(0);
+		return bean;
+	}*/
+    
 	/*	
 	@Bean(name = "entityManagerFactory")
 	public EntityManagerFactory entityManagerFactory() {
