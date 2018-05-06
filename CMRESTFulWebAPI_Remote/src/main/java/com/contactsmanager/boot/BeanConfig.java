@@ -52,8 +52,8 @@ public class BeanConfig {
             	    //.allowedHeaders("header1", "header2", "header3")
             	    .allowedHeaders("*")
             	    //.exposedHeaders("header1", "header2")
-            	    //.exposedHeaders("*")
-            	    //.allowCredentials(false)
+            	    //.exposedHeaders("header1", "header2")
+            	  //.allowCredentials(false)
             		.maxAge(3600);
             }
         };
