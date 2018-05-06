@@ -45,14 +45,14 @@ public class BeanConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
             	registry.addMapping("/**")
-            		.allowedOrigins("https://ang5-cm-rest-web-api-9912638661.stackblitz.io")
+            		.allowedOrigins("*")
             		//.allowedOrigins("https://ang5-cm-rest-web-api-9912638661.stackblitz.io")
             		//.allowedMethods("PUT", "DELETE", "GET", "POST")
             		.allowedMethods("*")
             	    //.allowedHeaders("header1", "header2", "header3")
             	    .allowedHeaders("*")
             	    //.exposedHeaders("header1", "header2")
-            	    //.exposedHeaders("header1", "header2")
+            	    .exposedHeaders("Access-Control-Allow-Origin")
             	  //.allowCredentials(false)
             		.maxAge(3600);
             }
