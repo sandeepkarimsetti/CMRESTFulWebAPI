@@ -39,7 +39,7 @@ public class BeanConfig {
 	    return entityManagerFactory.unwrap(SessionFactory.class);
 	}
 
-    @Bean
+/*    @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurerAdapter() {
             @Override
@@ -57,7 +57,7 @@ public class BeanConfig {
             		.maxAge(3600);
             }
         };
-    }
+    }*/
     
 /*    @Bean
 	public FilterRegistrationBean corsFilter() {

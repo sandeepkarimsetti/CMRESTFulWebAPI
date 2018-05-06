@@ -31,7 +31,7 @@ public class ContactsManagerController {
 		this.contactsManagerService = contactsManagerService;
 	}
 //	@CrossOrigin(origins = "*", maxAge = 3600)
-	@CrossOrigin
+//	@CrossOrigin
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String defaultRequest() {
 		return "invalid request";
@@ -39,7 +39,7 @@ public class ContactsManagerController {
 
 	// GET all customers
 	// API URL: /CMWebAPI/contacts
-	@CrossOrigin
+//	@CrossOrigin
 //	@CrossOrigin(origins = "*", maxAge = 3600)
 	@RequestMapping(value = "/contacts", method = RequestMethod.GET)
 	public List<Contact> getAllContacts() {
@@ -67,7 +67,7 @@ public class ContactsManagerController {
 	// GET a customer
 	// API URL: /CMWebAPI/contacts/id
 	//@CrossOrigin(origins = "*", maxAge = 3600)
-	@CrossOrigin
+//	@CrossOrigin
 	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.GET)
 	public Contact getContactByID(@PathVariable("id") String contactID) {
 		// edit this line
@@ -79,7 +79,7 @@ public class ContactsManagerController {
 	// POST a customer
 	// API URL: /CMWebAPI/contacts
 	//@CrossOrigin(origins = "*", maxAge = 3600)
-	@CrossOrigin
+//	@CrossOrigin
 	@RequestMapping(value = "/contacts", method = RequestMethod.POST)
 	public Contact createContact(@RequestBody Contact contact) {
 		System.out.println("^^^^^ Request Body in createContact controller method ^^^^" + contact);
@@ -100,7 +100,7 @@ public class ContactsManagerController {
 	// PUT a customer
 	// API URL: /CMWebAPI/contacts
 	//@CrossOrigin(origins = "*", maxAge = 3600)
-	@CrossOrigin
+//	@CrossOrigin
 	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.PUT)
 	public Contact updateContact(@PathVariable("id") String contactID, @RequestBody Contact contact) {
 		
@@ -117,7 +117,7 @@ public class ContactsManagerController {
 	// DELETE a customer
 	// API URL: /CMWebAPI/contacts/id
 	//@CrossOrigin(origins = "*", maxAge = 3600)
-	@CrossOrigin
+//	@CrossOrigin
 	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.DELETE)
 	public Contact deleteContact(@PathVariable("id") String contactID) {
 		// edit this line
