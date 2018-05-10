@@ -2,7 +2,12 @@ package com.contactsmanager.controller;
 
 import java.util.List;
 
+import javax.xml.ws.Response;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -74,6 +79,22 @@ public class ContactsManagerController {
 		Contact fetchedContact = contactsManagerService.getContactByID(Long.parseLong(contactID));
 		
 		return fetchedContact;
+	}
+	
+	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.GET)
+	public ResponseEntity<Contact> getContactResponseByID(@PathVariable("id") String contactID) {
+		// edit this line
+		Contact fetchedContact = contactsManagerService.getContactByID(Long.parseLong(contactID));
+		
+		HttpHeaders responseHeaders = new HttpHeaders();
+		
+		responseHeaders.add("Access-Control-Allow-Origin", "*");
+		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
+		responseHeaders.add("Access-Control-Max-Age", "3600");
+		responseHeaders.add("Access-Control-Allow-Headers", "x-requested-with");
+		responseHeaders.add("Access-Control-Expose-Headers", "content-type,transfer-encoding,date,connection,cache-control,x-final-url,access-control-allow-origin");
+		
+		return new ResponseEntity<Contact>(fetchedContact, responseHeaders, HttpStatus.OK);
 	}
 
 	// POST a customer
