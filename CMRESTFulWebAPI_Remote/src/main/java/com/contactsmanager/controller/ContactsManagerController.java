@@ -73,8 +73,9 @@ public class ContactsManagerController {
 	// API URL: /CMWebAPI/contacts/id
 	//@CrossOrigin(origins = "*", maxAge = 3600)
 //	@CrossOrigin
-	@RequestMapping(value = "/contacts/{id}", method = RequestMethod.GET)
-	public Contact getContactByID(@PathVariable("id") String contactID) {
+	//@RequestMapping(value = "/contacts/{id}", method = RequestMethod.GET)
+	//public Contact getContactByID(@PathVariable("id") String contactID) {
+	public Contact getContactByID(String contactID) {
 		// edit this line
 		Contact fetchedContact = contactsManagerService.getContactByID(Long.parseLong(contactID));
 		
