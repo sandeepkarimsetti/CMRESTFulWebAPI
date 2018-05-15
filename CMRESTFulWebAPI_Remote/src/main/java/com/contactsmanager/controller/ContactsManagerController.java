@@ -59,7 +59,7 @@ public class ContactsManagerController {
 		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
-		responseHeaders.add("Access-Control-Allow-Headers", "x-requested-with");
+		responseHeaders.add("Access-Control-Allow-Headers", "*");
 		responseHeaders.add("Access-Control-Expose-Headers",
 				"content-type,transfer-encoding,date,connection,cache-control,x-final-url,access-control-allow-origin");
 
@@ -93,7 +93,7 @@ public class ContactsManagerController {
 		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
-		responseHeaders.add("Access-Control-Allow-Headers", "x-requested-with");
+		responseHeaders.add("Access-Control-Allow-Headers", "*");
 		responseHeaders.add("Access-Control-Expose-Headers",
 				"content-type,transfer-encoding,date,connection,cache-control,x-final-url,access-control-allow-origin");
 
@@ -113,7 +113,7 @@ public class ContactsManagerController {
 		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
-		responseHeaders.add("Access-Control-Allow-Headers", "x-requested-with");
+		responseHeaders.add("Access-Control-Allow-Headers", "*");
 		responseHeaders.add("Access-Control-Expose-Headers",
 				"content-type,transfer-encoding,date,connection,cache-control,x-final-url,access-control-allow-origin");
 
@@ -142,7 +142,7 @@ public class ContactsManagerController {
 		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
-		responseHeaders.add("Access-Control-Allow-Headers", "x-requested-with");
+		responseHeaders.add("Access-Control-Allow-Headers", "*");
 		responseHeaders.add("Access-Control-Expose-Headers",
 				"content-type,transfer-encoding,date,connection,cache-control,x-final-url,access-control-allow-origin");
 
@@ -168,7 +168,7 @@ public class ContactsManagerController {
 		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
-		responseHeaders.add("Access-Control-Allow-Headers", "x-requested-with");
+		responseHeaders.add("Access-Control-Allow-Headers", "*");
 		responseHeaders.add("Access-Control-Expose-Headers",
 				"content-type,transfer-encoding,date,connection,cache-control,x-final-url,access-control-allow-origin");
 		
