@@ -18,7 +18,7 @@ import com.contactsmanager.domain.*;
 
 import com.contactsmanager.service.ContactsManagerServiceImpl;
 
-//@CrossOrigin(origins = "https://ang5-cm-rest-web-api-9912638661.stackblitz.io", maxAge = 3600)
+//@CrossOrigin(origins = "*", maxAge = 3600)
 //@CrossOrigin(origins = "*", maxAge = 3600)
 
 @RestController
@@ -56,7 +56,7 @@ public class ContactsManagerController {
 
 		HttpHeaders responseHeaders = new HttpHeaders();
 
-		responseHeaders.add("Access-Control-Allow-Origin", "https://ang5-cm-rest-web-api-9912638661.stackblitz.io");
+		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
 		responseHeaders.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -90,7 +90,7 @@ public class ContactsManagerController {
 
 		HttpHeaders responseHeaders = new HttpHeaders();
 
-		responseHeaders.add("Access-Control-Allow-Origin", "https://ang5-cm-rest-web-api-9912638661.stackblitz.io");
+		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
 		responseHeaders.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -110,7 +110,7 @@ public class ContactsManagerController {
 		
 		HttpHeaders responseHeaders = new HttpHeaders();
 
-		responseHeaders.add("Access-Control-Allow-Origin", "https://ang5-cm-rest-web-api-9912638661.stackblitz.io");
+		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
 		responseHeaders.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -139,7 +139,7 @@ public class ContactsManagerController {
 		
 		HttpHeaders responseHeaders = new HttpHeaders();
 
-		responseHeaders.add("Access-Control-Allow-Origin", "https://ang5-cm-rest-web-api-9912638661.stackblitz.io");
+		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
 		responseHeaders.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -165,7 +165,7 @@ public class ContactsManagerController {
 		
 		HttpHeaders responseHeaders = new HttpHeaders();
 
-		responseHeaders.add("Access-Control-Allow-Origin", "https://ang5-cm-rest-web-api-9912638661.stackblitz.io");
+		responseHeaders.add("Access-Control-Allow-Origin", "*");
 		responseHeaders.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS, HEAD");
 		responseHeaders.add("Access-Control-Max-Age", "3600");
 		responseHeaders.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
